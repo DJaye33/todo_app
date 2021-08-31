@@ -1,0 +1,13 @@
+.heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 4.8rem;
+
+  & h1 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 0.75rem;
+    color: var(--very-light-gray);
+  }
+}

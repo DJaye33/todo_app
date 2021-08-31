@@ -33,6 +33,18 @@ body {
   background: url("../images/bg-mobile-light.jpg");
   background-color: var(--very-light-grayish-blue);
   background-repeat: no-repeat;
-  background-size: cover; }
+  background-size: cover;
+  padding: 0 2.4rem; }
+
+.heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 4.8rem; }
+  .heading h1 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 0.75rem;
+    color: var(--very-light-gray); }
 
 /*# sourceMappingURL=app.css.map */
