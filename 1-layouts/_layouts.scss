@@ -11,3 +11,23 @@
     color: var(--very-light-gray);
   }
 }
+
+.main {
+  margin-top: 4rem;
+
+  .todo-input {
+    display: flex;
+    align-items: center;
+    background-color: var(--very-light-gray);
+    padding: 1.4rem 2rem;
+    width: 100%;
+    box-shadow: 0px 35px 50px -15px rgba(194, 195, 214, 0.5);
+    border-radius: 0.5rem;
+
+    .add-todo {
+      border: none;
+      width: 100%;
+      padding: .4rem;
+    }
+  }
+}
