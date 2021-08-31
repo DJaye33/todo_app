@@ -29,6 +29,10 @@ html {
   --very-dark-grayish-blue-2: #393a4c; }
 
 body {
-  font-family: "Josefin Sans", sans-serif; }
+  font-family: "Josefin Sans", sans-serif;
+  background: url("../images/bg-mobile-light.jpg");
+  background-color: var(--very-light-grayish-blue);
+  background-repeat: no-repeat;
+  background-size: cover; }
 
 /*# sourceMappingURL=app.css.map */
