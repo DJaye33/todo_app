@@ -1,0 +1,34 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0; }
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; }
+
+:root {
+  --primary-bright-blue: #3a7bfd;
+  --primary-check-bg: linear-gradient(#57ddff, #c058f3);
+  --very-light-gray: #fafafa;
+  --very-light-grayish-blue: #e4e5f1;
+  --light-grayish-blue: #d2d3db;
+  --Dark-grayish-blue: #9394a5;
+  --very-dark-grayish-blue: #484b6a;
+  --very-dark-blue: #161722;
+  --very-dark-desaturated-blue: #25273c;
+  --light-grayish-blue: #cacde8;
+  --light-grayish-blue-hover: #e4e5f1;
+  --dark-grayish-blue-1: #777a92;
+  --very-dark-grayish-blue-1: #4d5066;
+  --very-dark-grayish-blue-2: #393a4c; }
+
+body {
+  font-family: "Josefin Sans", sans-serif; }
+
+/*# sourceMappingURL=app.css.map */
