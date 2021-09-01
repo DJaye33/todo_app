@@ -1,13 +1,22 @@
 .heading {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 4.8rem;
-  
-    & h1 {
-      font-size: 3rem;
-      text-transform: uppercase;
-      letter-spacing: 0.75rem;
-      color: var(--very-light-gray);
-    }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 4.8rem;
+  transition: margin-top .3s ease-out;
+
+  & h1 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 0.75rem;
+    color: var(--very-light-gray);
   }
+}
+
+@media only screen and (min-width: 588px) {
+  .heading {
+    margin: 0 auto;
+    margin-top: 7rem;
+    max-width: 588px;
+  }
+}
