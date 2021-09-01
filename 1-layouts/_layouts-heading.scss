@@ -9,11 +9,11 @@
     margin: 0 auto;
     margin-top: 7rem;
     max-width: 588px;
-}
+  }
 
   @media only screen and (min-width: 1441px) {
     margin-top: 15rem;
-}
+  }
 
   & h1 {
     font-size: 3rem;
@@ -21,6 +21,4 @@
     letter-spacing: 0.75rem;
     color: var(--very-light-gray);
   }
-
-  
 }
