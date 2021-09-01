@@ -35,9 +35,9 @@
       <section class="todo-item-container">
         <div class="todo-item">
           <div class="todo-item-check">
-            <label for="checkmark">
-              <input type="checkbox" id="checkmark" class="checkmark" />
-            </label>
+            <div role="button" class="checkmark">
+              <!-- <img src="/images/icon-check.svg" alt="toggle todo" /> -->
+            </div>
             <p class="todo-item-text">Complete online JavaScript course</p>
           </div>
           <figure class="delete-todo">
@@ -46,10 +46,21 @@
         </div>
         <div class="todo-item">
           <div class="todo-item-check">
-            <label for="checkmark">
-              <input type="checkbox" id="checkmark" class="checkmark" />
-            </label>
+            <div role="button" class="checkmark">
+              <!-- <img src="/images/icon-check.svg" alt="toggle todo" /> -->
+            </div>
             <p class="todo-item-text">Jog around park 3x</p>
+          </div>
+          <figure role="button" class="delete-todo">
+            <img src="/images/icon-cross.svg" alt="delete todo item" />
+          </figure>
+        </div>
+        <div class="todo-item">
+          <div class="todo-item-check">
+            <div role="button" class="checkmark">
+              <!-- <img src="/images/icon-check.svg" alt="toggle todo" /> -->
+            </div>
+            <p class="todo-item-text">10 minute meditation</p>
           </div>
           <figure class="delete-todo">
             <img src="/images/icon-cross.svg" alt="delete todo item" />
@@ -57,16 +68,34 @@
         </div>
         <div class="todo-item">
           <div class="todo-item-check">
-            <label for="checkmark">
-              <input type="checkbox" id="checkmark" class="checkmark" />
-            </label>
+            <div role="button" class="checkmark">
+              <!-- <img src="/images/icon-check.svg" alt="toggle todo" /> -->
+            </div>
             <p class="todo-item-text">Read for 1 hour</p>
           </div>
           <figure class="delete-todo">
             <img src="/images/icon-cross.svg" alt="delete todo item" />
           </figure>
         </div>
+        <div class="todo-item">
+          <div class="todo-item-check">
+            <div role="button" class="checkmark">
+              <!-- <img src="/images/icon-check.svg" alt="toggle todo" /> -->
+            </div>
+            <p class="todo-item-text">Complete Todo App</p>
+          </div>
+          <figure class="delete-todo">
+            <img src="/images/icon-cross.svg" alt="delete todo item" />
+          </figure>
+        </div>
+      </section>
+      <section class="footer">
+        <div class="left-completed">
+          <p class="footer-items"><span class="items">5</span> items left</p>
+          <p class="footer-items footer-clear">Clear Completed</p>
+        </div>
       </section>
     </main>
+    <script src="scripts/app.js"></script>
   </body>
 </html>

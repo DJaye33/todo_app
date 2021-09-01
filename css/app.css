@@ -39,8 +39,8 @@ body {
 
 ::placeholder {
   font-family: "Josefin Sans", sans-serif;
-  font-size: 1.3rem;
-  line-height: 1.3rem;
+  font-size: 1.25rem;
+  line-height: 1.25rem;
   letter-spacing: 0.01rem;
   color: var(--placeholder-color); }
 
@@ -79,21 +79,43 @@ body {
       justify-content: space-between;
       align-items: center;
       padding: 1.6rem 2rem;
-      background-color: var(--very-light-gray); }
+      background-color: var(--very-light-gray);
+      border-bottom: 1px solid var(--light-grayish-blue); }
       .main .todo-item-container .todo-item:first-of-type {
         border-top-right-radius: 0.5rem;
         border-top-left-radius: 0.5rem; }
-      .main .todo-item-container .todo-item:last-of-type {
-        border-bottom-right-radius: 0.5rem;
-        border-bottom-left-radius: 0.5rem; }
       .main .todo-item-container .todo-item-check {
         display: flex;
         align-items: center; }
+        .main .todo-item-container .todo-item-check .checkmark {
+          cursor: pointer;
+          border: 1px solid var(--light-grayish-blue);
+          width: 2rem;
+          height: 2rem;
+          border-radius: 50%; }
       .main .todo-item-container .todo-item-text {
-        font-size: 1.3rem;
-        line-height: 1.3rem;
+        font-size: 1.25rem;
+        line-height: 1.25rem;
         margin-left: 1.2rem;
         letter-spacing: 0.01rem;
         color: var(--very-dark-blue); }
+      .main .todo-item-container .todo-item .delete-todo img {
+        width: 1.4rem;
+        height: 1.4rem; }
+
+.footer .left-completed {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.6rem 2rem;
+  background-color: var(--very-light-gray);
+  border-bottom-right-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+  box-shadow: 0px 35px 50px -15px rgba(194, 195, 214, 0.5); }
+  .footer .left-completed .footer-items {
+    font-size: 1.2rem;
+    line-height: 1.2rem;
+    letter-spacing: -0.01rem;
+    color: var(--placeholder-color); }
 
 /*# sourceMappingURL=app.css.map */
