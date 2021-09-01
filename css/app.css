@@ -157,5 +157,39 @@ body {
   text-align: center;
   margin-top: 4rem;
   color: var(--placeholder-color); }
+.footer .resize-footer-items-container {
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.6rem 2.4rem;
+  background-color: var(--very-light-gray);
+  border-bottom-right-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem; }
+  .footer .resize-footer-items-container .resize-footer-active {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 16.6rem;
+    font-weight: bold;
+    font-size: 1.4rem;
+    line-height: 1.4rem;
+    letter-spacing: 0.01rem;
+    color: var(--placeholder-color);
+    transition: color 0.2s ease-in; }
+  .footer .resize-footer-items-container .resize-footer-active-text:hover {
+    color: var(--primary-bright-blue); }
+  .footer .resize-footer-items-container .resize-footer-items {
+    font-size: 1.2rem;
+    line-height: 1.2rem;
+    letter-spacing: -0.01rem;
+    color: var(--placeholder-color); }
+@media only screen and (min-width: 588px) {
+  .footer .left-completed {
+    display: none; }
+  .footer .footer-active-container {
+    display: none; }
+  .footer .resize-footer-items-container {
+    display: flex; } }
 
 /*# sourceMappingURL=app.css.map */
