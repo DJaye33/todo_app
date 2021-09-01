@@ -36,6 +36,12 @@ body {
   background-repeat: no-repeat;
   background-size: 100%;
   padding: 0 2.4rem; }
+  @media only screen and (min-width: 588px) {
+    body {
+      background: url("../images/bg-desktop-light.jpg");
+      background-color: var(--very-light-grayish-blue);
+      background-repeat: no-repeat;
+      background-size: 100%; } }
 
 ::placeholder {
   font-family: "Josefin Sans", sans-serif;
@@ -50,19 +56,27 @@ body {
   align-items: center;
   margin-top: 4.8rem;
   transition: margin-top 0.3s ease-out; }
+  @media only screen and (min-width: 588px) {
+    .heading {
+      margin: 0 auto;
+      margin-top: 7rem;
+      max-width: 588px; } }
+  @media only screen and (min-width: 1441px) {
+    .heading {
+      margin-top: 15rem; } }
   .heading h1 {
     font-size: 3rem;
     text-transform: uppercase;
     letter-spacing: 0.75rem;
     color: var(--very-light-gray); }
-  @media only screen and (min-width: 588px) {
-    .heading .heading {
-      margin: 0 auto;
-      margin-top: 7rem;
-      max-width: 588px; } }
 
 .main {
   margin-top: 3rem; }
+  @media only screen and (min-width: 588px) {
+    .main {
+      margin: 0 auto;
+      margin-top: 4rem;
+      max-width: 588px; } }
   .main .todo-input {
     display: flex;
     align-items: center;
@@ -118,11 +132,6 @@ body {
         width: 1.4rem;
         height: 1.4rem; }
 
-@media only screen and (min-width: 588px) {
-  .main {
-    margin: 0 auto;
-    margin-top: 4rem;
-    max-width: 588px; } }
 .footer .left-completed {
   display: flex;
   justify-content: space-between;
@@ -133,6 +142,9 @@ body {
   border-bottom-left-radius: 0.5rem;
   box-shadow: 0px 35px 50px -15px rgba(194, 195, 214, 0.5);
   margin-bottom: 1.6rem; }
+  @media only screen and (min-width: 588px) {
+    .footer .left-completed {
+      display: none; } }
   .footer .left-completed .footer-items {
     font-size: 1.2rem;
     line-height: 1.2rem;
@@ -144,6 +156,9 @@ body {
 .footer .footer-active-container {
   background-color: var(--very-light-gray);
   border-radius: 0.5rem; }
+  @media only screen and (min-width: 588px) {
+    .footer .footer-active-container {
+      display: none; } }
   .footer .footer-active-container .footer-active {
     display: flex;
     justify-content: space-between;
@@ -167,6 +182,9 @@ body {
   text-align: center;
   margin-top: 4rem;
   color: var(--placeholder-color); }
+  @media only screen and (min-width: 588px) {
+    .footer .drag {
+      margin-right: 4.5rem; } }
 .footer .resize-footer-items-container {
   display: none;
   justify-content: space-between;
@@ -175,6 +193,9 @@ body {
   background-color: var(--very-light-gray);
   border-bottom-right-radius: 0.5rem;
   border-bottom-left-radius: 0.5rem; }
+  @media only screen and (min-width: 588px) {
+    .footer .resize-footer-items-container {
+      display: flex; } }
   .footer .resize-footer-items-container .resize-footer-active {
     cursor: pointer;
     display: flex;
@@ -194,20 +215,12 @@ body {
     line-height: 1.2rem;
     letter-spacing: -0.01rem;
     color: var(--placeholder-color); }
+    @media only screen and (min-width: 588px) {
+      .footer .resize-footer-items-container .resize-footer-items {
+        font-size: 1.4rem;
+        line-height: 1.4rem; } }
   .footer .resize-footer-items-container .resize-footer-clear {
     cursor: pointer;
     transition: color 0.2s ease-out; }
-@media only screen and (min-width: 588px) {
-  .footer .left-completed {
-    display: none; }
-  .footer .footer-active-container {
-    display: none; }
-  .footer .resize-footer-items-container {
-    display: flex; }
-    .footer .resize-footer-items-container .resize-footer-items {
-      font-size: 1.4rem;
-      line-height: 1.4rem; }
-  .footer .drag {
-    margin-right: 4.5rem; } }
 
 /*# sourceMappingURL=app.css.map */

@@ -10,6 +10,10 @@
     box-shadow: 0px 35px 50px -15px rgba(194, 195, 214, 0.5);
     margin-bottom: 1.6rem;
 
+    @media only screen and (min-width: 588px) {
+      display: none;
+    }
+
     .footer-items {
       font-size: 1.2rem;
       line-height: 1.2rem;
@@ -26,6 +30,10 @@
   .footer-active-container {
     background-color: var(--very-light-gray);
     border-radius: 0.5rem;
+
+    @media only screen and (min-width: 588px) {
+      display: none;
+    }
 
     .footer-active {
       display: flex;
@@ -56,6 +64,10 @@
     text-align: center;
     margin-top: 4rem;
     color: var(--placeholder-color);
+
+    @media only screen and (min-width: 588px) {
+      margin-right: 4.5rem;
+    }
   }
 
   .resize-footer-items-container {
@@ -66,6 +78,10 @@
     background-color: var(--very-light-gray);
     border-bottom-right-radius: 0.5rem;
     border-bottom-left-radius: 0.5rem;
+
+    @media only screen and (min-width: 588px) {
+      display: flex;
+    }
 
     .resize-footer-active {
       cursor: pointer;
@@ -90,34 +106,16 @@
       line-height: 1.2rem;
       letter-spacing: -0.01rem;
       color: var(--placeholder-color);
-    }
 
-    .resize-footer-clear {
-      cursor: pointer;
-      transition: color 0.2s ease-out;
-    }
-  }
-
-  @media only screen and (min-width: 588px) {
-    .left-completed {
-      display: none;
-    }
-
-    .footer-active-container {
-      display: none;
-    }
-
-    .resize-footer-items-container {
-      display: flex;
-
-      .resize-footer-items {
+      @media only screen and (min-width: 588px) {
         font-size: 1.4rem;
         line-height: 1.4rem;
       }
     }
 
-    .drag {
-      margin-right: 4.5rem;
+    .resize-footer-clear {
+      cursor: pointer;
+      transition: color 0.2s ease-out;
     }
   }
 }
