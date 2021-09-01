@@ -13,7 +13,7 @@
 }
 
 .main {
-  margin-top: 4rem;
+  margin-top: 3rem;
 
   .todo-input {
     display: flex;
@@ -27,7 +27,45 @@
     .add-todo {
       border: none;
       width: 100%;
-      padding: .4rem;
+      padding: 0.4rem;
+      outline-color: #c058f3;
+      background-color: var(--very-light-gray);
+    }
+  }
+
+  .todo-item-container {
+    margin-top: 1.6rem;
+    box-shadow: 0px 35px 50px -15px rgba(194, 195, 214, 0.5);
+
+    .todo-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.6rem 2rem;
+      background-color: var(--very-light-gray);
+
+      &:first-of-type {
+        border-top-right-radius: 0.5rem;
+        border-top-left-radius: 0.5rem;
+      }
+
+      &:last-of-type {
+        border-bottom-right-radius: 0.5rem;
+        border-bottom-left-radius: 0.5rem;
+      }
+
+      &-check {
+        display: flex;
+        align-items: center;
+      }
+
+      &-text {
+        font-size: 1.3rem;
+        line-height: 1.3rem;
+        margin-left: 1.2rem;
+        letter-spacing: 0.01rem;
+        color: var(--very-dark-blue);
+      }
     }
   }
 }

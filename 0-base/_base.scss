@@ -1,16 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+:root {
+  // Primary
+  --primary-bright-blue: #3a7bfd;
+  --primary-check-bg: linear-gradient(#57ddff, #c058f3);
+  // Light Theme
+  --very-light-gray: #fafafa;
+  --very-light-grayish-blue: #e4e5f1;
+  --light-grayish-blue: #d2d3db;
+  --Dark-grayish-blue: #9394a5;
+  --very-dark-grayish-blue: #484b6a;
+  // Dark Theme
+  --very-dark-blue: #161722;
+  --very-dark-desaturated-blue: #25273c;
+  --light-grayish-blue: #cacde8;
+  --light-grayish-blue-hover: #e4e5f1;
+  --dark-grayish-blue-1: #777a92;
+  --very-dark-grayish-blue-1: #4d5066;
+  --very-dark-grayish-blue-2: #393a4c;
+  --placeholder-color: #9495a5;
+}
+
 body {
   font-family: "Josefin Sans", sans-serif;
   background: url("../images/bg-mobile-light.jpg");
   background-color: var(--very-light-grayish-blue);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100%;
   padding: 0 2.4rem;
 }
 
 ::placeholder {
   font-family: "Josefin Sans", sans-serif;
-  font-size: 1.2rem;
-  line-height: 1.2rem;
-  letter-spacing: .01rem;
+  font-size: 1.3rem;
+  line-height: 1.3rem;
+  letter-spacing: 0.01rem;
   color: var(--placeholder-color);
 }
