@@ -49,18 +49,18 @@ body {
   justify-content: space-between;
   align-items: center;
   margin-top: 4.8rem;
-  transition: margin-top .3s ease-out; }
+  transition: margin-top 0.3s ease-out; }
   .heading h1 {
     font-size: 3rem;
     text-transform: uppercase;
     letter-spacing: 0.75rem;
     color: var(--very-light-gray); }
+  @media only screen and (min-width: 588px) {
+    .heading .heading {
+      margin: 0 auto;
+      margin-top: 7rem;
+      max-width: 588px; } }
 
-@media only screen and (min-width: 588px) {
-  .heading {
-    margin: 0 auto;
-    margin-top: 7rem;
-    max-width: 588px; } }
 .main {
   margin-top: 3rem; }
   .main .todo-input {
@@ -72,11 +72,15 @@ body {
     box-shadow: 0px 35px 50px -15px rgba(194, 195, 214, 0.5);
     border-radius: 0.5rem; }
     .main .todo-input .add-todo {
+      font-family: inherit;
       border: none;
       width: 100%;
       padding: 0.4rem;
       outline-color: #c058f3;
-      background-color: var(--very-light-gray); }
+      background-color: var(--very-light-gray);
+      font-size: 1.4rem;
+      line-height: 1.4rem;
+      letter-spacing: -0.01rem; }
   .main .todo-item-container {
     margin-top: 1.6rem;
     box-shadow: 0px 35px 50px -15px rgba(194, 195, 214, 0.5); }
@@ -99,6 +103,11 @@ body {
           width: 2rem;
           height: 2rem;
           border-radius: 50%; }
+        .main .todo-item-container .todo-item-check .checkmark:hover {
+          border: 1px solid transparent;
+          background-image: linear-gradient(white, white), radial-gradient(circle at top left, #57ddff, #c058f3);
+          background-origin: border-box;
+          background-clip: content-box, border-box; }
       .main .todo-item-container .todo-item-text {
         font-size: 1.25rem;
         line-height: 1.25rem;
@@ -130,7 +139,8 @@ body {
     letter-spacing: -0.01rem;
     color: var(--placeholder-color); }
   .footer .left-completed .footer-clear {
-    cursor: pointer; }
+    cursor: pointer;
+    transition: font-weight 0.1s ease-in; }
 .footer .footer-active-container {
   background-color: var(--very-light-gray);
   border-radius: 0.5rem; }
@@ -184,12 +194,20 @@ body {
     line-height: 1.2rem;
     letter-spacing: -0.01rem;
     color: var(--placeholder-color); }
+  .footer .resize-footer-items-container .resize-footer-clear {
+    cursor: pointer;
+    transition: color 0.2s ease-out; }
 @media only screen and (min-width: 588px) {
   .footer .left-completed {
     display: none; }
   .footer .footer-active-container {
     display: none; }
   .footer .resize-footer-items-container {
-    display: flex; } }
+    display: flex; }
+    .footer .resize-footer-items-container .resize-footer-items {
+      font-size: 1.4rem;
+      line-height: 1.4rem; }
+  .footer .drag {
+    margin-right: 4.5rem; } }
 
 /*# sourceMappingURL=app.css.map */

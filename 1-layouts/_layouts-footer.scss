@@ -19,6 +19,7 @@
 
     .footer-clear {
       cursor: pointer;
+      transition: font-weight 0.1s ease-in;
     }
   }
 
@@ -90,6 +91,11 @@
       letter-spacing: -0.01rem;
       color: var(--placeholder-color);
     }
+
+    .resize-footer-clear {
+      cursor: pointer;
+      transition: color 0.2s ease-out;
+    }
   }
 
   @media only screen and (min-width: 588px) {
@@ -103,6 +109,15 @@
 
     .resize-footer-items-container {
       display: flex;
+
+      .resize-footer-items {
+        font-size: 1.4rem;
+        line-height: 1.4rem;
+      }
+    }
+
+    .drag {
+      margin-right: 4.5rem;
     }
   }
 }
