@@ -61,3 +61,17 @@ body {
   letter-spacing: 0.01rem;
   color: var(--placeholder-color);
 }
+
+.active {
+  background: rgb(192, 88, 243);
+  background: linear-gradient(
+    335deg,
+    rgba(192, 88, 243, 1) 35%,
+    rgba(87, 221, 255, 1) 100%
+  );
+}
+
+.strike {
+  color: var(--Dark-grayish-blue);
+  text-decoration: line-through;
+}

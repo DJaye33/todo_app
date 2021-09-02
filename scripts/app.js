@@ -1,15 +1,26 @@
-const todoInput = document.querySelector(".todo-input");
-const addTodo = document.querySelector(".add-todo");
-const todoItemContainer = document.querySelector(".todo-item-container");
-const closeBtn = document.querySelectorAll(".delete-todo");
-const todoItem = document.querySelectorAll(".todo-item");
+const checkmarks = document.querySelectorAll(".checkmark");
+const check = document.querySelector(".checkmark-mark");
 
-closeBtn.forEach((btn) => {
-  btn.addEventListener("click", (event) => {
-    event.path[2].style.display = "none";
+checkmarks.forEach((checkmark) => {
+  checkmark.addEventListener("click", (event) => {
+    event.currentTarget.classList.toggle("active");
+    event.currentTarget.firstElementChild.classList.toggle("checkmark-check");
     console.log(event);
   });
 });
+
+// const todoInput = document.querySelector(".todo-input");
+// const addTodo = document.querySelector(".add-todo");
+// const todoItemContainer = document.querySelector(".todo-item-container");
+// const closeBtn = document.querySelectorAll(".delete-todo");
+// const todoItem = document.querySelectorAll(".todo-item");
+
+// closeBtn.forEach((btn) => {
+//   btn.addEventListener("click", (event) => {
+//     event.path[2].style.display = "none";
+//     console.log(event);
+//   });
+// });
 
 // addTodo.addEventListener("keydown", (event) => {
 //   if (event.key === "Enter" && event.currentTarget.value === "") {
@@ -28,18 +39,18 @@ closeBtn.forEach((btn) => {
 //     todoItemContainer.insertAdjacentHTML(
 //       "beforeend",
 //       `
-//     <div class="todo-item">
-//     <div class="todo-item-check">
-//       <div role="button" class="checkmark">
-//         <!-- <img src="/images/icon-check.svg" alt="toggle todo" /> -->
-//       </div>
-//       <p class="todo-item-text">${event.currentTarget.value}</p>
-//     </div>
-//     <figure role="button" class="delete-todo">
-//       <img src="/images/icon-cross.svg" alt="delete todo item" />
-//     </figure>
-//   </div>
-//     `
+//           <div class="todo-item">
+//           <div class="todo-item-check">
+//             <div role="button" class="checkmark">
+//               <!-- <img src="/images/icon-check.svg" alt="toggle todo" /> -->
+//             </div>
+//             <p class="todo-item-text">${event.currentTarget.value}</p>
+//           </div>
+//           <figure role="button" class="delete-todo" hidden>
+//             <img src="/images/icon-cross.svg" alt="delete todo item" />
+//           </figure>
+//         </div>
+//           `
 //     );
 
 //     event.currentTarget.value = "";
