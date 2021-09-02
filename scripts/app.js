@@ -2,10 +2,12 @@ const checkmarks = document.querySelectorAll(".checkmark");
 const check = document.querySelector(".checkmark-mark");
 const todoItem = document.querySelectorAll(".todo-item");
 const itemsLeft = document.querySelectorAll(".items");
+const footerContols = document.querySelectorAll(".footer-controls");
 
+// for checkmark button and striketrhough on click
 checkmarks.forEach((checkmark) => {
   checkmark.addEventListener("click", (event) => {
-    event.currentTarget.classList.toggle("active");
+    event.currentTarget.classList.toggle("showGradient");
     event.currentTarget.firstElementChild.classList.toggle("checkmark-check");
     event.currentTarget.nextElementSibling.classList.toggle("strike");
   });
@@ -14,6 +16,21 @@ checkmarks.forEach((checkmark) => {
 // Show todo count
 itemsLeft.forEach((item) => {
   item.textContent = todoItem.length;
+});
+
+const checkForActiveControl = () => {
+  footerContols.forEach((control) => {
+    control.classList.remove("active");
+  });
+};
+
+// Add active class to footer control
+footerContols.forEach((control) => {
+  control.addEventListener("click", (event) => {
+    checkForActiveControl();
+    event.currentTarget.classList.add("active");
+    console.log(event.currentTarget.textContent);
+  });
 });
 
 // const todoInput = document.querySelector(".todo-input");

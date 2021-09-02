@@ -148,7 +148,7 @@ body {
           height: 2rem;
           border-radius: 50%;
           position: relative; }
-          .main .todo-item-container .todo-item-check .checkmark.active {
+          .main .todo-item-container .todo-item-check .checkmark.showGradient {
             background: #c058f3;
             background: linear-gradient(335deg, #c058f3 35%, #57ddff 100%); }
           .main .todo-item-container .todo-item-check .checkmark-check {
@@ -213,8 +213,10 @@ body {
     letter-spacing: 0.01rem;
     color: var(--placeholder-color);
     transition: color 0.2s ease-in; }
-  .footer .footer-active-container .footer-active-text:hover {
-    color: var(--primary-bright-blue); }
+    .footer .footer-active-container .footer-active-text.active {
+      color: var(--primary-bright-blue); }
+    .footer .footer-active-container .footer-active-text:active {
+      color: var(--very-dark-desaturated-blue); }
 .footer .drag {
   font-size: 1.4rem;
   line-height: 1.4rem;
@@ -247,8 +249,12 @@ body {
     letter-spacing: 0.01rem;
     color: var(--placeholder-color);
     transition: color 0.2s ease-in; }
-  .footer .resize-footer-items-container .resize-footer-active-text:hover {
-    color: var(--primary-bright-blue); }
+    .footer .resize-footer-items-container .resize-footer-active-text {
+      transition: color 0.2s ease-in; }
+      .footer .resize-footer-items-container .resize-footer-active-text.active {
+        color: var(--primary-bright-blue); }
+      .footer .resize-footer-items-container .resize-footer-active-text:active {
+        color: var(--very-dark-desaturated-blue); }
   .footer .resize-footer-items-container .resize-footer-items {
     font-size: 1.2rem;
     line-height: 1.2rem;

@@ -52,10 +52,14 @@
       letter-spacing: 0.01rem;
       color: var(--placeholder-color);
       transition: color 0.2s ease-in;
-    }
 
-    .footer-active-text:hover {
-      color: var(--primary-bright-blue);
+      &.active {
+        color: var(--primary-bright-blue);
+      }
+
+      &:active {
+        color: var(--very-dark-desaturated-blue);
+      }
     }
   }
   .drag {
@@ -95,10 +99,17 @@
       letter-spacing: 0.01rem;
       color: var(--placeholder-color);
       transition: color 0.2s ease-in;
-    }
 
-    .resize-footer-active-text:hover {
-      color: var(--primary-bright-blue);
+      &-text {
+        transition: color 0.2s ease-in;
+        &.active {
+          color: var(--primary-bright-blue);
+        }
+
+        &:active {
+          color: var(--very-dark-desaturated-blue);
+        }
+      }
     }
 
     .resize-footer-items {

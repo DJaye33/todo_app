@@ -63,6 +63,36 @@
             <img src="/images/icon-cross.svg" alt="delete todo item" />
           </figure>
         </div>
+        <div class="todo-item">
+          <div class="todo-item-check">
+            <div role="button" class="checkmark">
+              <img
+                src="/images/icon-check.svg"
+                class="checkmark-check"
+                alt="toggle todo"
+              />
+            </div>
+            <p class="todo-item-text">10 minutes meditation</p>
+          </div>
+          <figure role="button" class="delete-todo" hidden>
+            <img src="/images/icon-cross.svg" alt="delete todo item" />
+          </figure>
+        </div>
+        <div class="todo-item">
+          <div class="todo-item-check">
+            <div role="button" class="checkmark">
+              <img
+                src="/images/icon-check.svg"
+                class="checkmark-check"
+                alt="toggle todo"
+              />
+            </div>
+            <p class="todo-item-text">Read for 1 hour</p>
+          </div>
+          <figure role="button" class="delete-todo" hidden>
+            <img src="/images/icon-cross.svg" alt="delete todo item" />
+          </figure>
+        </div>
       </section>
       <section class="footer">
         <div class="resize-footer-items-container">
@@ -70,13 +100,26 @@
             <span class="items resize-count">5</span> items left
           </p>
           <div class="resize-footer-active">
-            <p role="button" class="resize-all resize-footer-active-text">
+            <p
+              role="button"
+              class="
+                resize-all resize-footer-active-text
+                footer-controls
+                active
+              "
+            >
               All
             </p>
-            <p role="button" class="resize-active resize-footer-active-text">
+            <p
+              role="button"
+              class="resize-active resize-footer-active-text footer-controls"
+            >
               Active
             </p>
-            <p role="button" class="resize-completed resize-footer-active-text">
+            <p
+              role="button"
+              class="resize-completed resize-footer-active-text footer-controls"
+            >
               Completed
             </p>
           </div>
@@ -92,9 +135,15 @@
         </div>
         <div class="footer-active-container">
           <div class="footer-active">
-            <p role="button" class="all footer-active-text">All</p>
-            <p role="button" class="active footer-active-text">Active</p>
-            <p role="button" class="completed footer-active-text">Completed</p>
+            <p role="button" class="footer-active-text footer-controls active">
+              All
+            </p>
+            <p role="button" class="footer-active-text footer-controls">
+              Active
+            </p>
+            <p role="button" class="footer-active-text footer-controls">
+              Completed
+            </p>
           </div>
         </div>
         <p class="drag">Drag and drop to reorder list</p>
