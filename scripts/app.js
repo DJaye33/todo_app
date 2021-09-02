@@ -1,13 +1,18 @@
 const checkmarks = document.querySelectorAll(".checkmark");
 const check = document.querySelector(".checkmark-mark");
+const todoItem = document.querySelectorAll(".todo-item");
+const itemsLeft = document.querySelector(".items");
 
 checkmarks.forEach((checkmark) => {
   checkmark.addEventListener("click", (event) => {
     event.currentTarget.classList.toggle("active");
     event.currentTarget.firstElementChild.classList.toggle("checkmark-check");
-    console.log(event);
+    event.currentTarget.nextElementSibling.classList.toggle("strike");
   });
 });
+
+// show todo count
+itemsLeft.textContent = todoItem.length;
 
 // const todoInput = document.querySelector(".todo-input");
 // const addTodo = document.querySelector(".add-todo");

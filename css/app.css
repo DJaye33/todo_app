@@ -51,14 +51,6 @@ body {
   letter-spacing: 0.01rem;
   color: var(--placeholder-color); }
 
-.active {
-  background: #c058f3;
-  background: linear-gradient(335deg, #c058f3 35%, #57ddff 100%); }
-
-.strike {
-  color: var(--Dark-grayish-blue);
-  text-decoration: line-through; }
-
 .heading {
   display: flex;
   justify-content: space-between;
@@ -134,7 +126,8 @@ body {
       align-items: center;
       padding: 1.6rem 2rem;
       background-color: var(--very-light-gray);
-      border-bottom: 1px solid var(--light-grayish-blue); }
+      border-bottom: 1px solid var(--light-grayish-blue);
+      transition: background-color 0.2s ease-in-out; }
       .main .todo-item-container .todo-item:hover {
         background-color: var(--very-light-grayish-blue-hover); }
       .main .todo-item-container .todo-item:hover > figure {
@@ -155,6 +148,9 @@ body {
           height: 2rem;
           border-radius: 50%;
           position: relative; }
+          .main .todo-item-container .todo-item-check .checkmark.active {
+            background: #c058f3;
+            background: linear-gradient(335deg, #c058f3 35%, #57ddff 100%); }
           .main .todo-item-container .todo-item-check .checkmark-check {
             display: none; }
       .main .todo-item-container .todo-item-text {
@@ -163,6 +159,9 @@ body {
         margin-left: 1.2rem;
         letter-spacing: 0.01rem;
         color: var(--very-dark-blue); }
+        .main .todo-item-container .todo-item-text.strike {
+          color: var(--Dark-grayish-blue) !important;
+          text-decoration: line-through; }
       .main .todo-item-container .todo-item .delete-todo {
         cursor: pointer;
         transition: transform 0.1s ease-in; }
