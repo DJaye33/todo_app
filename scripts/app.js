@@ -1,7 +1,7 @@
 const checkmarks = document.querySelectorAll(".checkmark");
 const check = document.querySelector(".checkmark-mark");
 const todoItem = document.querySelectorAll(".todo-item");
-const itemsLeft = document.querySelector(".items");
+const itemsLeft = document.querySelectorAll(".items");
 
 checkmarks.forEach((checkmark) => {
   checkmark.addEventListener("click", (event) => {
@@ -11,8 +11,10 @@ checkmarks.forEach((checkmark) => {
   });
 });
 
-// show todo count
-itemsLeft.textContent = todoItem.length;
+// Show todo count
+itemsLeft.forEach((item) => {
+  item.textContent = todoItem.length;
+});
 
 // const todoInput = document.querySelector(".todo-input");
 // const addTodo = document.querySelector(".add-todo");
