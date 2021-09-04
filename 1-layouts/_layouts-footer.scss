@@ -24,6 +24,10 @@
     .footer-clear {
       cursor: pointer;
       transition: font-weight 0.1s ease-in;
+
+      &:active {
+        color: var(--very-dark-desaturated-blue);
+      }
     }
   }
 
@@ -127,6 +131,10 @@
     .resize-footer-clear {
       cursor: pointer;
       transition: color 0.2s ease-out;
+
+      &:active {
+        color: var(--very-dark-desaturated-blue);
+      }
     }
   }
 }

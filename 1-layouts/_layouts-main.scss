@@ -75,6 +75,14 @@
       border-bottom: 1px solid var(--light-grayish-blue);
       transition: background-color 0.2s ease-in-out;
 
+      &.completed, &.active {
+        display: flex;
+      }
+
+      &.hide {
+        display: none;
+      }
+
       &:hover {
         background-color: var(--very-light-grayish-blue-hover);
       }

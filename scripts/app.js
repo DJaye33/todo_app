@@ -4,6 +4,55 @@ const todoItem = document.querySelectorAll(".todo-item");
 const itemsLeft = document.querySelectorAll(".items");
 const footerContols = document.querySelectorAll(".footer-controls");
 
+const todoCount = () => {
+  itemsLeft.forEach((item) => {
+    item.textContent = todoItem.length;
+  });
+};
+
+todoCount();
+
+// Places blue color on currently active footer control
+const checkForActiveControl = () => {
+  footerContols.forEach((control) => {
+    control.classList.remove("active");
+  });
+};
+
+const checkForAllFooterControl = () => {
+  todoItem.forEach((todo) => {
+    todo.classList.remove("hide");
+  });
+};
+
+const checkForActiveFooterControl = () => {
+  todoItem.forEach((todo) => {
+    if (todo.classList.contains("completed")) {
+      todo.classList.add("hide");
+    } else {
+      todo.classList.remove("hide");
+    }
+  });
+};
+
+const checkForCompleted = () => {
+  todoItem.forEach((todo) => {
+    if (todo.classList.contains("completed")) {
+      todo.classList.remove("hide");
+    } else {
+      todo.classList.add("hide");
+    }
+  });
+};
+
+checkmarks.forEach((checkmark) => {
+  checkmark.addEventListener("click", (event) => {
+    event.currentTarget.parentElement.parentElement.classList.toggle(
+      "completed"
+    );
+  });
+});
+
 // for checkmark button and striketrhough on click
 checkmarks.forEach((checkmark) => {
   checkmark.addEventListener("click", (event) => {
@@ -13,70 +62,18 @@ checkmarks.forEach((checkmark) => {
   });
 });
 
-// Show todo count
-itemsLeft.forEach((item) => {
-  item.textContent = todoItem.length;
-});
-
-const checkForActiveControl = () => {
-  footerContols.forEach((control) => {
-    control.classList.remove("active");
-  });
-};
-
 // Add active class to footer control
 footerContols.forEach((control) => {
   control.addEventListener("click", (event) => {
     checkForActiveControl();
     event.currentTarget.classList.add("active");
-    console.log(event.currentTarget.textContent);
+
+    if (event.currentTarget.innerText === "Completed") {
+      checkForCompleted();
+    } else if (event.currentTarget.innerText === "Active") {
+      checkForActiveFooterControl();
+    } else if (event.currentTarget.innerText === "All") {
+      checkForAllFooterControl();
+    }
   });
 });
-
-// const todoInput = document.querySelector(".todo-input");
-// const addTodo = document.querySelector(".add-todo");
-// const todoItemContainer = document.querySelector(".todo-item-container");
-// const closeBtn = document.querySelectorAll(".delete-todo");
-// const todoItem = document.querySelectorAll(".todo-item");
-
-// closeBtn.forEach((btn) => {
-//   btn.addEventListener("click", (event) => {
-//     event.path[2].style.display = "none";
-//     console.log(event);
-//   });
-// });
-
-// addTodo.addEventListener("keydown", (event) => {
-//   if (event.key === "Enter" && event.currentTarget.value === "") {
-//     todoInput.classList.add("active");
-//     event.currentTarget.classList.add("active");
-//     event.currentTarget.style.outlineColor = "#fff";
-//     todoInput.style.animation =
-//       "shake-horizontal 0.8s cubic-bezier(0.455, 0.03, 0.515, 0.955) both";
-//   } else {
-//     todoInput.classList.remove("active");
-//     event.currentTarget.classList.remove("active");
-//     event.currentTarget.style.outlineColor = "#c058f3";
-//     todoInput.style.animation = "";
-
-//     // insert todo
-//     todoItemContainer.insertAdjacentHTML(
-//       "beforeend",
-//       `
-//           <div class="todo-item">
-//           <div class="todo-item-check">
-//             <div role="button" class="checkmark">
-//               <!-- <img src="/images/icon-check.svg" alt="toggle todo" /> -->
-//             </div>
-//             <p class="todo-item-text">${event.currentTarget.value}</p>
-//           </div>
-//           <figure role="button" class="delete-todo" hidden>
-//             <img src="/images/icon-cross.svg" alt="delete todo item" />
-//           </figure>
-//         </div>
-//           `
-//     );
-
-//     event.currentTarget.value = "";
-//   }
-// });
